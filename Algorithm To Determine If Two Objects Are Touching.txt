@@ -1,0 +1,36 @@
+Personal Algorithm To Determine If Two Objects Are Touching...
+
+
+Arguments : obj1, obj2
+var horizontalThreshold : (obj1.width + obj2.width) / 2
+var verticalThreshold : (obj1.height + obj2.height) / 2
+
+
+Case 1(Not Touching)
+
+if(obj1.x - obj2.x != horizontalThreshold &&
+   obj2.x - obj1.x != horizontalThreshold &&
+   obj1.y - obj2.y != verticalThreshold &&
+   obj2.y - obj1.y != verticalThreshold){
+   "Action"
+  }
+
+
+Case 2(Touching)
+
+if(obj1.x - obj2.x >= horizontalThreshold &&
+   obj2.x - obj1.x >= horizontalThreshold &&
+   obj1.y - obj2.y >= verticalThreshold &&
+   obj2.y - obj1.y >= verticalThreshold){
+   "Action"
+  }
+
+
+Case 2(Inside / Touching)
+
+if(obj1.x - obj2.x < horizontalThreshold &&
+   obj2.x - obj1.x < horizontalThreshold &&
+   obj1.y - obj2.y < verticalThreshold &&
+   obj2.y - obj1.y < verticalThreshold){
+   "Action"
+  }
